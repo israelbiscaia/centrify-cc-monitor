@@ -77,7 +77,6 @@ Function Restart_Service($Computer)
 
     #Stop Service
     Write-EventLog -LogName "Application" -Source "adproxy" -EventId $eventId -EntryType $eventType -Message $eventMessageServiceStopped
-    #(Get-WmiObject Win32_Service -filter "name='adproxy'" -ComputerName $Computer).StopService()
     Stop-Service -displayname "Centrify Cloud Connector"
     
     #Sleep for 30 seconds
@@ -85,7 +84,6 @@ Function Restart_Service($Computer)
 
     #Start Service
     Write-EventLog -LogName "Application" -Source "adproxy" -EventId $eventId -EntryType $eventType -Message $eventMessageServiceStarted
-    #(Get-WmiObject Win32_Service -filter "name='adproxy'" -ComputerName $Computer).StartService()
     Start-Service -displayname "Centrify Cloud Connector"
 }
 
