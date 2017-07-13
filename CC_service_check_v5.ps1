@@ -77,14 +77,14 @@ Function Restart_Service($Computer)
 
     #Stop Service
     Write-EventLog -LogName "Application" -Source "adproxy" -EventId $eventId -EntryType $eventType -Message $eventMessageServiceStopped
-    Stop-Service -displayname "Centrify Cloud Connector"
+    Stop-Service -displayname "Centrify Connector"
     
     #Sleep for 30 seconds
     Start-Sleep -Seconds $SleepSeconds
 
     #Start Service
     Write-EventLog -LogName "Application" -Source "adproxy" -EventId $eventId -EntryType $eventType -Message $eventMessageServiceStarted
-    Start-Service -displayname "Centrify Cloud Connector"
+    Start-Service -displayname "Centrify Connector"
 }
 
 CheckProxy
