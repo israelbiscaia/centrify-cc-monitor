@@ -5,7 +5,7 @@
 
 param (
 [string]$server = "pod1.centrify.com/", #Centrify pod URL
-[string]$username = "admin@cenrifytenant.com", #Tenant reporting-capable username
+[string]$username = "admin@cenrifytenant.com", #Tenant reporting-capable username. This user must be a member of a role that is allowed password-only authentication.
 [string]$password = "Centrify", #Tenant admin password
 $eventId = "1010", #Event ID to be written to the Event Log in case the Centrify Cloud Connector service is down
 $eventType = "Warning", #Event type to be written to the Event Log in case the Centrify Cloud Connector service is down
