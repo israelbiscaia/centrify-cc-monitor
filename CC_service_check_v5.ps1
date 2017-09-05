@@ -9,9 +9,9 @@ param (
 [string]$password = "Centrify", #Tenant admin password
 $eventId = "1010", #Event ID to be written to the Event Log in case the Centrify Cloud Connector service is down
 $eventType = "Warning", #Event type to be written to the Event Log in case the Centrify Cloud Connector service is down
-$eventMessageCCOffline = "Centrify Cloud Connector is Inactive", #Event type to be written to the Event Log in case the Centrify Cloud Connector service is inactive
-$eventMessageServiceStopped = "Centrify Cloud Connector is being stopped", #Event type to be written to the Event Log in case the Centrify Cloud Connector service is down
-$eventMessageServiceStarted = "Centrify Cloud Connector is being started", #Event type to be written to the Event Log in case the Centrify Cloud Connector service is inactive
+$eventMessageCCOffline = "Centrify Connector is Inactive", #Event type to be written to the Event Log in case the Centrify Cloud Connector service is inactive
+$eventMessageServiceStopped = "Centrify Connector is being stopped", #Event type to be written to the Event Log in case the Centrify Cloud Connector service is down
+$eventMessageServiceStarted = "Centrify Connector is being started", #Event type to be written to the Event Log in case the Centrify Cloud Connector service is inactive
 $SleepSeconds = "30", #Number of seconds to sleep between stop and restart service
 $ServiceArray = "adproxy", #Name of service(s) to stop and restart
 [string]$ContentType = "application/json",
